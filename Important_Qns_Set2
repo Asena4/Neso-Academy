@@ -1,0 +1,28 @@
+int main()
+{
+	int var = 052;
+	printf("%d", var);
+	return 0;
+}
+
+Place zero before any value and it will become an octal value but not a decimal value.
+The following is a conversion of octal value to decimal value:
+
+(5)*(8^1)  + (2)*(8^0)   =  42
+
+Changing the %d to %o will result to 52.
+
+########################################################
+
+#include <stdio.h>
+
+#define STRING "%s\n"
+#define KEVIN "Welcome to Kevin Academy!"
+
+int main()
+{
+	printf(STRING, KEVIN);
+	return 0;
+}
+
+Result is: Welcome to Kevin Academy!

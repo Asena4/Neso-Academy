@@ -1,0 +1,16 @@
+== , != , <= , >= , < , >
+
+All will return True or False
+4 == 5 False
+4 != 5 True
+
+int a = 300, b = 2090;
+
+if (b >= a)
+{
+	printf("Bingo! You are in");
+}
+else
+{
+	printf("OOPS! You are out");
+}

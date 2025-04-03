@@ -1,0 +1,31 @@
+What is the output of op_prob1.c C program fragment? Assume size og interger is 4 bytes.
+a) 5 4
+b) 6 4
+c) 5 8
+d) Compiler error
+
+C standard is the language specification which is adopted by all C compilers across the globe.
+C99 adopted in 1999 while C11 in 2011
+
+According to C99 standard:
+The sizeof operator yields the size (in bytes) of its operand, which may be an expression or a paranthesized name of a type.
+The size is determined from the type of the operand. If the type of the operand is a variable length array type, then the operand is evaluated;
+otherwise, the operand is not evaluated and the result is an integer constant.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the output of the following C program fragment?
+int a = 1;
+int b = 1;
+int c = ++a || b++;
+int d = b-- && --a;
+
+printf("%d %d %d %d", d, c, b, a);
+
+a) 1111
+b) 0100
+c) 1001
+d) 1101
+
+Remember the short circuiting when a condition is met.
+TRUE || anything == TRUE

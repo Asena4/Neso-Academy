@@ -1,0 +1,11 @@
+USING CONST
+
+Syntax: const some_data_type some_variable_name
+
+#include <stdio.h>
+
+int main()
+{
+	const int var = 57;
+	printf(%d), var);
+}

@@ -1,0 +1,87 @@
+Remember PEDMAS
+Associativity of operators comes into picture when precedence of operators are the same and we need to decide which operator will be evaluated first.
+10 / 2 * 5 the answer is 25
+
+CATEGORY               OPERATORS                          ASSOCIATIVITY
+Parenthesis/brackets   () [] -> . ++ --                   Left to right
+Unary                  ! ~ ++ -- + - * & (type) sizeof    Right to left
+Multiplicative         * / %                              Left to right
+Additive               + -                                Left to right
+Bitwise Shift          << >>                              Left to right
+Relational             < <= > >=                          Left to right
+Equality               == !=                              Left to right
+Bitwise AND            &                                  Left to right
+Bitwise XOR            ^                                  Left to right
+Bitwise OR             |                                  Left to right
+Logical AND            &&                                 Left to right
+Logical OR             ||                                 Left to right
+Conditional            ? :                                Right to left
+Assignment             = += -= *= /= %= &= ^= |= <<= >>=  Right to left
+Comma                  ,                                  Left to right
+
+() parenthesis in function calls
+int var = fun()
+= operator is having less precedence as compared to () therefore, () belongs to fun and fun will be treated as a function.
+After precedence it will look like int var = (fun());
+If suppose = operator is having greater precedence then, fun will belong to = operator and therefore it will be treated as a variable.
+int (var = fun)();
+
+Member access operators (-> .)
+They are used to access members of structures
+
+Postfix Increment/Decrement (++, --)
+Precedence of postfix increment/decrement operator is greater than prefix increment/decrement.
+Associativity of postfix is also different from prefix. Associativity of postfix operators is from left to right and that of prefix operators is from right to left.
+
+Example:
+#################################
+
+int main()
+{
+	int a;
+	a = fun1() + fun2();
+	printf("%d", a);
+	return 0;
+}
+
+int fun1()
+{
+	printf("Kevin");
+	return 1;
+}
+int fun2()
+{
+	printf("Academy");
+        return 1;
+}
+#####################################
+
+Which function is called first? fun1() or fun2()?
+It is not defined whether fun1() will be called first or whether fun2() will be called. Behaviour is undefined and output is compiler dependent.
+Associativity will not come into picture as we have just one operator and which function will be called first is undefined. Associativity will only work when we have more than one operators of the same precedence.
+Nobody knows if the output will be KevinAcademy2 or AcademyKevin2
+
+What is the output of the following C program fragment?
+##########################################################
+#include <stdio.h>
+
+int main()
+{
+	int a = 10, b = 20, c = 30, d = 40;
+	if(a <= b == d > c)
+	{
+		printf("TRUE");
+	}
+	else
+	{
+                printf("FALSE");
+        }
+	return 0;
+}
+
+Remember that relational operators have greater precedence over equality operators.
+(a <= b) == (d > c)
+(10 <= 20) == (40 > 30)
+1 == 1
+TRUE
+#########################################################################################

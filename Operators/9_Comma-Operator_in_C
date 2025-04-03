@@ -1,0 +1,45 @@
+Comma operator can be used as a separator
+int a = 3, b = 5;
+
+Comma operator can be used as an "operator"
+It returns the rightmost operand in the expression and it evaluated the rest of the operands and finally reject them.
+int a = (3, 4, 8);
+printf("%d", a);
+Output: 8
+
+Comma operator returns the rightmost operand in the expression and evaluates the rest of the operands and finally reject them.
+int var = (printf("%s\n", "HELLO!"), 5);
+printf("%d", var);
+
+Output: HELLO!
+        5
+
+Comma operator is having the least precedence among all the operators available in C language.
+
+int a;
+a = 3, 4, 8;
+
+printf("%d", a);
+
+...is the same as:
+int a;
+(a = 3), 4, 8;
+
+printf("%d", a);
+
+Here comma is behaving like a separator. It acts like that within function calls and definitions, variable declarations and enum declarations.
+int a = 3, 4, 8; is equivalent to int a = 3; int 4; int 8; which will result to Output: ERROR
+
+Bracket has the highest precedence than any other operator
+int a;
+a = (3, 4, 8);
+printf("%d", a);
+
+OR
+
+int a = (3, 4, 8);
+printf("%d", a);
+
+...are the same, and Output: 8
+
+

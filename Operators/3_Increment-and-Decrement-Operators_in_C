@@ -1,0 +1,30 @@
+a++ is the same as a = a + 1
+a-- is the same as a = a - 1
+Both are unary operators because they apply on a single operand
+
+Pre-increment operator ++a vs Post-increment operator a++
+Pre - first increment/decrement then assign
+Post - first assign it to another variable then increment/decrement
+x = ++a; x = 3
+x = a++ x = 2
+
+You cannot use rvalue before or after increment/decrement operator e.g. (a+b)++ the error will be "lvalue required as increment operand"
+
+lvalue(left value): simply means an object that has an identifiable location in memory(i.e. having an address).
+> In any assignment statement "lvalue" must have the capability to hold the data
+> lvalue must be a variable because they have the capability to store data
+> lvalue cannot be a function, expression (like a+b) or a constant (like 3,4 e.t.c)
+
+rvalue(right value): means an object that has no identifiable location in memory.
+> Anything which is capable of returning a constant expression or value
+> Expressions like a+b will return some constant value
+
+TOKEN GENERATION
+Lexical analysis is the first phase in the compilation process
+Lexical analyser (scanner) scans the whole source program and when it finds the meaningful sequence of characters (lexemes) then it converts it into a token
+Token: lexemes mapped into token-name and attribute-value. e.g int -> <keyword,int>
+It always matches the longest character sequence.
+The following has five tokens:
+int a = 5;  -----> |int |  |a |  |= |  |5 |  |; | 
+a+++b -----------> |a |  |++ |  |+ |  |b |
+a + ++b ---------> |a |  |+ |  |++ |  |b |

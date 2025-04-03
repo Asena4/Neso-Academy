@@ -1,0 +1,24 @@
+int main()
+{
+	int var = 0x43FF;
+	printf("%x", var);
+	return 0;
+}
+
+Placing "0x" before any value will treat it as a hexadecimal.
+Result will be 43ff. Changing format specifier from x to X, result will be 43FF.
+Changing x to d will be changing hexadecimal to decimal; output is 17407.
+
+#######################################################################################
+
+#include <stdio.h>
+
+static int i;
+static int i = 27;
+static int i;
+int main()
+{
+	static int i;
+	printf("%d", i);
+	return 0;
+}

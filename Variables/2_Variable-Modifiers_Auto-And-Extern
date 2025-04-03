@@ -1,0 +1,50 @@
+What is Auto Modifier?
+
+Variables declared inside a scope by default are automatic variables
+Syntax: auto int some_variable_name;
+
+#include <stdio.h>
+
+int main()
+{
+	int var;
+	return 0;
+}
+
+is the same as...
+
+#include <stdio.h>
+
+int main()
+{
+	auto int var;
+	return 0;
+}
+
+1. If you won't initialize auto variable, by default it will be initialized with some garbage (random) value
+2. Global variable by default will be initialized to 0
+-------------------------------------------------------------------------------------------------------------
+
+Extern Modifier
+
+int var; ---- Declaration and definition
+extern int var; ---- Declaration
+
+Extern modifier is used when a particular file needs to access a variable from another file
+Multiple declarations are allowed but not multiple definitions.
+
+#include <stdio.h>
+
+int a = 9;
+int main()
+{
+	extern int a;
+	printf("%d", a);
+	return 0;
+}
+
+1. When we write extern some_data_type some_variable_name; no memory is allocated. Only property of variable is announced
+2. Multiple declarations of extern variable is allowed within the file. This is not the case with automatic variables
+3. Extern variable says to the compiler "go outside my scope and you will find the definition of the variable that I declared"
+4. Compiler believes that whatever the extern variable said is true and produce no error. Linker throws an error when it finds no such variable
+5. When an extern variable is initialized, then memory for this variable is allocated and it will be considered defined.

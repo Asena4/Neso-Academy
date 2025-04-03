@@ -1,0 +1,8 @@
+It requires two values L-Value and R-Value
+This operator copies R-Value to L-Value
+Assignment operator has the least precedence except the comma operator
+
++= First addition then assignment, -= , *= , /= , %= , <<= , >>= , &= , |= , ^=
+a += 1 is the same as a = a + 1
+
+

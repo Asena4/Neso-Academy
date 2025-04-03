@@ -1,0 +1,62 @@
+&& , || , !
+&& and || are used to combine two conditions
+&& returns TRUE when all the conditions under consideration are true returns FALSE when any one or more than one condition is false.
+
+int a = 5;
+
+if (a == 5 && a != 6 && a <= 56 && a > 4)
+{
+	printf("You have got it!");
+}
+
+|| returns TRUE when one or more than one condition under consideration is true and returns FALSE when all conditions are false.
+
+int a = 5;
+
+if (a != 5 || a == 6 || a >= 56 || a > 4)                                             {
+        printf("You have got it!");
+}
+
+! operator is used to complement the condition under consideration
+! returns TRUE when condition is FALSE and returns FALSE when condition is TRUE
+
+int a = 5;
+
+if (!(a == 6))
+{
+	printf("You have got it!");
+}
+
+Short cicrcuit in case of && means if there is a condition anywhere in the expression that returns false, then the rest of the conditions after that will not be evaluated.
+
+#include <stdio.h>
+
+int main()
+{
+	int a = 5, b = 3;
+	int incr;
+
+	incr = (a < b) && (b++);
+	printf("%d\n", incr);
+	printf("%d", b);
+	return 0; 
+}
+Value that will be printed is 0 and 3
+
+TRUE = 1, FALSE = 0
+
+Short cicrcuit in case of || means if there is a condition anywhere in the expression that returns True, then the rest of the conditions after that will not be evaluated.
+
+#include <stdio.h>
+
+int main()
+{
+        int a = 5, b = 3;
+        int incr;
+
+        incr = (a > b) || (b++);
+        printf("%d\n", incr);
+        printf("%d\n", b);
+        return 0;
+}
+The value that will be printed will be 1 and 3

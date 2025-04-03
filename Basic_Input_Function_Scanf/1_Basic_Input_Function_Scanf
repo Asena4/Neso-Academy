@@ -1,0 +1,16 @@
+Stands for Scan Formatted string
+
+It uses format specifiers like printf e.g %d, %c, %s, e.t.c.
+
+& is also called as address - of operator. Scanf needs to know the address of the variable in order to store the input of the user.
+
+int main()
+{
+	int a, b;
+	printf("Enter first number\n");
+	scanf("%d", &a);
+	printf("Enter second number\n");
+	scanf("%d", &b);
+	printf("%scanf("%d", &a);d + %d = %d", a, b, a+b);
+	return 0;
+}
