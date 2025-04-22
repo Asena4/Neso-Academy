@@ -1,0 +1,27 @@
+DIFFERENCE BETWEEN WHILE LOOP AND DO-WHILE LOOP
+
+WHILE                         DO-WHILE
+
+int i = 0;                    int i = 0;
+while(i > 0)                  do
+{                             {
+	printf("%d", i);      		printf("%d", i);
+	i--;                  		i--;
+}                             } while(i > 0);
+
+Output: NO OUTPUT             Output: 0
+
+WHEN SHOULD I PREFER DO-WHILE OVER WHILE?
+Write a program which allows user to enter an integer until he enters value 0
+
+int n;                                    int n;
+printf("Enter and integer\n");            do
+scanf("%d", &n)                           {
+                                          	printf("Enter and integer\n");
+while(n != 0)                             	scanf("%d", &n);
+{                                         } while(n != 0);
+	printf("Enter and integer\n");
+	scanf("%d", &n);                  printf("You are out of this loop");
+}
+
+printf("You are out of this loop");

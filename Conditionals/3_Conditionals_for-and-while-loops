@@ -1,0 +1,30 @@
+WHILE LOOP
+
+Syntax:
+
+while(expression)
+{
+	statement 1;
+        statement 1;
+}
+
+int i = 3;
+while(i > 0)
+{
+	print(i);
+	i--;
+}
+
+FOR LOOP
+
+Syntax:
+
+for(initialization; condition; increment/decrement)
+{
+	Statements;
+}
+
+for(i = 3; i > 0; i--)
+{
+	print(i)
+}

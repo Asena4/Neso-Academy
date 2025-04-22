@@ -1,0 +1,38 @@
+Switch is a good replacement to long else if constructs.
+
+int x = 2;
+
+switch(x)                                                        checks if x==1
+{
+	case 1: printf("x is 1");
+		break;                                           if x==1 condition is satisfied and there
+        case 2: printf("x is 2");                                is no break after printf then subsequent
+                break;                                           expression will also get evaluated until
+        case 3: printf("x is 3");                                we reach the next break.
+                break;
+        default: printf("x is a number besides 1, 2, and 3");    if none of the cases are satisfied then
+                break;                                           default will be executed. Default is optional.
+}
+
+FACTS RELATED TO SWITCH
+=======================
+1. You are not allowed to add duplicate cases.
+
+2. Only those expressions are allowed in switch which results in integral constant value.
+int a = 1, b = 2, c = 3;              float a = 1.15, b = 2.0, c = 3.0;
+switch(a+b*c) is allowed              switch(a+b*c) is not allowed
+
+3. Float value is not allowed as a constant value in case label. Only integer constants/constant expressions are allowed in case label.
+	case 2.14:             case 2+2*5:
+	is not allowed         is allowed
+
+4. Variable expressions are not allowed in case labels. Although macros are allowed.
+int y = 5;                     #define y 5
+        case y:                case y:
+	is not allowed         is allowed
+
+5. Default can be placed anywhere inside switch. It will still get evaluated if no match is found.
+	default:
+	case 1:
+	case 2:
+	is OK
